@@ -2,4 +2,4 @@
 
 ![Screenshot](assets/screenshot.png)
 
-[Example Output](assets/example_output.pdf)
+[Example Output](assets/output_example.pdf)
