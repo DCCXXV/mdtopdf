@@ -23,13 +23,12 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
 Inline code looks like `let x = 42` within a sentence.
 
 ```ocaml
-let convert req =
-  match%lwt Dream.multipart req with
-  | `Ok [ ("file", [ (_, content) ]) ] ->
-    let tmp_pdf = Filename.temp_file "mdtopdf" ".pdf" in
-    Dream.respond ~headers:["Content-Type", "application/pdf"] tmp_pdf
-  | _ ->
-    Dream.respond ~status:`Bad_Request "bad request"
+let fib n =
+  let rec aux n a b =
+    if n = 0 then a
+    else aux (n - 1) b (a + b)
+  in
+  aux n 0 1
 ```
 
 ---

@@ -21,7 +21,6 @@ let convert_handler req =
 					("pandoc", [|
 						"pandoc"; tmp_md;
 						"--pdf-engine=weasyprint";
-						"--no-highlight";
 						"--css=" ^ Sys.getcwd () ^ "/static/css/pdf.css";
 						"-o"; tmp_pdf
 					|])

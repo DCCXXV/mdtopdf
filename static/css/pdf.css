@@ -59,16 +59,47 @@ code {
   font-size: 0.88em;
 }
 
-pre {
-  border: 1px solid #d0d5dd;
+pre, pre.sourceCode {
+  background: #2c333b;
+  border: 1px solid #282828;
   padding: 1em;
   font-size: 0.88em;
   line-height: 1.5;
 }
 
-pre code {
-  padding: 0;
-}
+/* credits to: https://github.com/runxel/skylighting-theme */
+
+pre code { color: #c9d1d9; padding: 0; }
+
+code span.kw { color: #ff6c9b; }                         /* Keyword */
+code span.dt { color: #c28eff; }                         /* DataType */
+code span.dv { color: #8dc5ff; }                         /* DecVal */
+code span.bn { color: #8dc5ff; }                         /* BaseN */
+code span.fl { color: #8dc5ff; }                         /* Float */
+code span.ch { color: #e3db7a; }                         /* Char */
+code span.st { color: #e3db7a; }                         /* String */
+code span.co { color: #bec5cd; font-style: italic; }     /* Comment */
+code span.ot { color: #c9d1d9; }                         /* Other */
+code span.al { color: #ff6c9b; }                         /* Alert */
+code span.fu { color: #70df5c; }                         /* Function */
+code span.cn { color: #c28eff; }                         /* Constant */
+code span.sc { color: #e3db7a; }                         /* SpecialChar */
+code span.vs { color: #e3db7a; }                         /* VerbatimString */
+code span.ss { color: #e3db7a; }                         /* SpecialString */
+code span.im { color: #ff6c9b; }                         /* Import */
+code span.va { color: #70df5c; }                         /* Variable */
+code span.cf { color: #ff6c9b; }                         /* ControlFlow */
+code span.op { color: #8dc5ff; }                         /* Operator */
+code span.bu { color: #70df5c; }                         /* BuiltIn */
+code span.ex { color: #70df5c; }                         /* Extension */
+code span.pp { color: #c28eff; }                         /* Preprocessor */
+code span.at { color: #bfcdea; }                         /* Attribute */
+code span.er { color: #ff6c9b; }                         /* Error */
+code span.wa { color: #e3db7a; font-style: italic; }     /* Warning */
+code span.do { color: #bec5cd; font-style: italic; }     /* Documentation */
+code span.an { color: #bec5cd; font-style: italic; }     /* Annotation */
+code span.cv { color: #bec5cd; font-style: italic; }     /* CommentVar */
+code span.in { color: #bec5cd; }                         /* Information */
 
 blockquote {
   border-left: 3px solid #ff6c9b;
