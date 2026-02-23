@@ -1,7 +1,7 @@
 (executable
  (public_name mdtopdf)
  (name main)
- (libraries mdtopdf dream)
+ (libraries mdtopdf dream lwt.unix)
  (preprocess (pps lwt_ppx)))
 
 (rule

@@ -94,7 +94,8 @@ label[for="file-input"] {
   text-align: center;
 }
 
-label[for="file-input"]:hover {
+label[for="file-input"]:hover,
+label[for="file-input"].drag-over {
   border-color: var(--green);
   color: var(--text);
 }

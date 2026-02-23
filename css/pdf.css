@@ -1,0 +1,118 @@
+@font-face {
+  font-family: "Tenor Sans";
+  src: url("fonts/TenorSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@page {
+  margin: 2.5cm 2cm;
+}
+
+body {
+  background: #ffffff;
+  color: #1e2329;
+  font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+  font-size: 11pt;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-top: 1.5em;
+  margin-bottom: 0.4em;
+}
+
+h1 {
+  font-size: 2em;
+  color: #5d7fcd;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: #5d7fcd;
+}
+
+h3 {
+  font-size: 1.2em;
+  color: #5d7fcd;
+}
+
+h4 {
+  font-size: 1em;
+  color: #5d7fcd;
+}
+
+p {
+  margin: 0.75em 0;
+}
+
+a {
+  color: #5d7fcd;
+  text-decoration: none;
+}
+
+code {
+  font-family: monospace;
+  font-size: 0.88em;
+}
+
+pre {
+  border: 1px solid #d0d5dd;
+  padding: 1em;
+  font-size: 0.88em;
+  line-height: 1.5;
+}
+
+pre code {
+  padding: 0;
+}
+
+blockquote {
+  border-left: 3px solid #ff6c9b;
+  margin: 1em 0;
+  padding: 0.4em 1em;
+  color: #5a6270;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: 0.95em;
+}
+
+th {
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: normal;
+  color: #ff6c9b;
+  padding: 0.5em 0.75em;
+  text-align: left;
+  border-bottom: 2px solid #ff6c9b;
+}
+
+td {
+  padding: 0.5em 0.75em;
+  border-bottom: 1px solid #e4e8ed;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e4e8ed;
+  margin: 2em 0;
+}
+
+ul, ol {
+  padding-left: 1.5em;
+  margin: 0.5em 0;
+}
+
+li {
+  margin: 0.25em 0;
+}
+
+li::marker {
+  color: #ff6c9b;
+}

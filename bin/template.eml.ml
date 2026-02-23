@@ -14,13 +14,42 @@ let render _ =
       </h1>
     </header>
     <main>
-      <form>
-        <label for="file-input"
+      <form method="post" action="/convert" enctype="multipart/form-data">
+        <label id="drop-zone" for="file-input"
           >drop a file, click to browse or paste your markdown</label
         >
-        <input id="file-input" type="file" />
+        <input id="file-input" name="file" type="file" />
         <input type="submit" value="Get PDF" />
       </form>
     </main>
+    <script>
+      const zone = document.getElementById("drop-zone");
+      const input = document.getElementById("file-input");
+
+      zone.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        zone.classList.add("drag-over");
+      });
+
+      zone.addEventListener("dragleave", () => {
+        zone.classList.remove("drag-over");
+      });
+
+      zone.addEventListener("drop", (e) => {
+        e.preventDefault();
+        zone.classList.remove("drag-over");
+        const file = e.dataTransfer.files[0];
+        if (file) {
+          const dt = new DataTransfer();
+          dt.items.add(file);
+          input.files = dt.files;
+          zone.textContent = file.name;
+        }
+      });
+
+      input.addEventListener("change", () => {
+        if (input.files[0]) zone.textContent = input.files[0].name;
+      });
+    </script>
   </body>
 </html>
