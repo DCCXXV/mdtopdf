@@ -4,7 +4,8 @@ let render _ =
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="dark" />
-<link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="static/css/style.css" />
+    <link rel="icon" href="static/img/favicon.png" />
     <title>MDtoPDF</title>
   </head>
   <body>
@@ -19,10 +20,14 @@ let render _ =
           >drop a file, click to browse or paste your markdown</label
         >
         <input id="file-input" name="file" type="file" />
+        <p id="error"></p>
         <input type="submit" value="Get PDF" />
       </form>
     </main>
     <script>
+      const error = new URLSearchParams(window.location.search).get("error");
+      if (error) document.getElementById("error").textContent = error;
+
       const zone = document.getElementById("drop-zone");
       const input = document.getElementById("file-input");
 
