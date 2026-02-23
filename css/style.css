@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "Tenor Sans";
+  src: url("fonts/TenorSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+textarea {
+  user-select: text;
+}
+
+:root {
+  --green: #70df5c;
+  --pink: #ff6c9b;
+  --bg: #131618;
+  --surface: #2c333b;
+  --border: #282828;
+  --text: #c9d1d9;
+  --muted: #bec5cd;
+}
+
+html,
+body {
+  height: 90%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background: var(--bg);
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+h1 > .a {
+  font-size: 2rem;
+  width: 100%;
+  max-width: 800px;
+  font-weight: 900;
+  color: var(--pink);
+}
+
+main {
+  width: 100%;
+  max-width: 800px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+p {
+  color: var(--text);
+  margin-top: 0.75rem;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+label[for="file-input"] {
+  display: block;
+  background: var(--surface);
+  border: 2px dashed var(--border);
+  color: var(--muted);
+  cursor: pointer;
+  padding: 10rem 2rem;
+  text-align: center;
+}
+
+label[for="file-input"]:hover {
+  border-color: var(--green);
+  color: var(--text);
+}
+
+input[type="submit"] {
+  align-self: flex-start;
+  background: var(--pink);
+  border: 1px solid var(--pink);
+  color: var(--surface);
+  cursor: pointer;
+  font-weight: 900;
+  margin-top: 1rem;
+  margin-left: auto;
+  padding: 0.75rem 3rem;
+}
+
+input[type="submit"]:hover {
+  background: transparent;
+  color: var(--pink);
+}
+
+.secondary {
+  -webkit-text-fill-color: var(--muted);
+}
