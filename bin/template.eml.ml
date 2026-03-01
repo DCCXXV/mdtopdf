@@ -17,7 +17,7 @@ let render _ =
     <main>
       <form method="post" action="/convert" enctype="multipart/form-data">
         <label id="drop-zone" for="file-input"
-          >drop a file, click to browse or paste your markdown</label
+          >drop a file or click to browse</label
         >
         <input id="file-input" name="file" type="file" />
         <p id="error"></p>
